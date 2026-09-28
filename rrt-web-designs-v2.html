@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>RRT Web Designs | Websites for small businesses</title>
+<meta name="description" content="Fast, mobile-friendly websites for small businesses. Standard £100, Business £250, Premium £500.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,800&family=Source+Sans+3:wght@400;600&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#f3f5f8;--surface:#fff;--ink:#0e1b2c;--muted:#4d5b6e;--line:#d5dce6;--accent:#2f5bff;--accent-ink:#fff;--sun:#ffc94a;--shadow:#ffc94a;
+--head:'Bricolage Grotesque',Georgia,serif;--body:'Source Sans 3',system-ui,sans-serif;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0b1320;--surface:#131e30;--ink:#eef2f8;--muted:#a3b0c4;--line:#26334a;--accent:#7f9bff;--accent-ink:#0b1320}}
+:root[data-theme="dark"]{--bg:#0b1320;--surface:#131e30;--ink:#eef2f8;--muted:#a3b0c4;--line:#26334a;--accent:#7f9bff;--accent-ink:#0b1320}
+html{scroll-padding-top:calc(76px + env(safe-area-inset-top,0px));scroll-behavior:smooth}
+*,*::before,*::after{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 18px/1.6 var(--body)}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--accent);outline-offset:3px}
+.wrap{max-width:1120px;margin:0 auto;padding:0 22px}
+header{position:sticky;top:env(safe-area-inset-top,0px);background:var(--bg);border-bottom:1px solid var(--line);z-index:10}
+.nav{display:flex;align-items:center;justify-content:space-between;height:66px}
+.logo{font:800 22px var(--head);text-decoration:none;letter-spacing:-.02em}
+.logo span{background:var(--sun);color:#0e1b2c;padding:0 6px;border-radius:4px;margin-right:4px}
+nav{display:flex;align-items:center;gap:12px}
+nav ul{display:flex;gap:24px;list-style:none;margin:0;padding:0;align-items:center}
+nav a{text-decoration:none;font-weight:600}
+nav a:not(.btn):hover{color:var(--accent)}
+.btn{display:inline-block;background:var(--accent);color:var(--accent-ink);font:600 17px var(--body);padding:13px 24px;border-radius:8px;text-decoration:none;border:2px solid var(--accent);cursor:pointer;transition:transform .15s}
+.btn:hover{transform:translateY(-2px)}
+.btn.alt{background:transparent;color:var(--ink);border-color:var(--ink)}
+.ico{background:none;border:2px solid var(--ink);color:var(--ink);border-radius:8px;padding:6px 12px;font:600 15px var(--body);cursor:pointer}
+#menu{display:none}
+h1{font:800 clamp(42px,7vw,78px)/1 var(--head);letter-spacing:-.035em;margin:0 0 22px}
+h2{font:800 clamp(30px,4.4vw,46px)/1.08 var(--head);letter-spacing:-.025em;margin:0 0 14px}
+h3{font:800 22px var(--head);margin:0 0 6px}
+.hero{display:grid;grid-template-columns:1.05fr .95fr;gap:52px;align-items:center;padding:76px 0 88px}
+.lead{color:var(--muted);font-size:21px;max-width:34ch;margin:0 0 28px}
+.cta{display:flex;gap:14px;flex-wrap:wrap}
+.demo{--c:#c2410c;--c2:#fff1e6}
+.chips{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:14px}
+.chip{border:2px solid var(--ink);background:var(--surface);color:var(--ink);border-radius:99px;padding:5px 14px;font:600 15px var(--body);cursor:pointer}
+.chip[aria-pressed="true"]{background:var(--ink);color:var(--bg)}
+.mock{background:#fff;color:#1a1a1a;border:2px solid var(--ink);border-radius:12px;box-shadow:10px 10px 0 var(--shadow);overflow:hidden}
+.bar{display:flex;gap:6px;padding:10px 14px;border-bottom:2px solid var(--ink);background:#fff;align-items:center}
+.bar i{width:11px;height:11px;border-radius:50%;background:#d5dce6;border:1.5px solid #0e1b2c}
+.bar em{font:normal 13px var(--body);margin-left:10px;background:#eef1f5;border-radius:99px;padding:1px 12px;color:#4d5b6e}
+.site{padding:20px}
+.site .top{display:flex;justify-content:space-between;font:800 15px var(--head);color:var(--c);margin-bottom:22px}
+.site .top span{font:400 13px var(--body);color:#4d5b6e}
+.site h4{font:800 28px/1.05 var(--head);margin:0 0 8px;letter-spacing:-.02em}
+.site p{margin:0 0 14px;font-size:15px;color:#4d5b6e}
+.site .go{display:inline-block;background:var(--c);color:#fff;font:600 14px var(--body);padding:7px 16px;border-radius:6px}
+.site .tiles{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-top:20px}
+.site .tiles div{background:var(--c2);border-radius:8px;padding:10px;font-size:13px;font-weight:600;color:var(--c);min-height:64px}
+.note{font-size:14px;color:var(--muted);margin:14px 0 0}
+section{padding:80px 0;border-top:1px solid var(--line)}
+.sub{color:var(--muted);max-width:54ch;margin:0 0 38px}
+.grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.svc{padding-top:14px;border-top:4px solid var(--ink)}
+.svc p{margin:0;color:var(--muted)}
+.plan{background:var(--surface);border:2px solid var(--ink);border-radius:12px;padding:28px;display:flex;flex-direction:column}
+.plan.pop{box-shadow:8px 8px 0 var(--shadow);transform:translateY(-8px)}
+.tag{align-self:flex-start;background:var(--sun);color:#0e1b2c;font:600 14px var(--body);padding:2px 10px;border-radius:99px;margin-bottom:10px}
+.price{font:800 54px var(--head);letter-spacing:-.03em;margin:8px 0 2px}
+.plan ul{list-style:none;padding:0;margin:16px 0 24px;display:grid;gap:9px;flex:1}
+.plan li{padding-left:26px;position:relative}
+.plan li::before{content:"✓";position:absolute;left:0;color:var(--accent);font-weight:800}
+.plan .btn{text-align:center}
+.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:22px;counter-reset:s;padding:0;list-style:none;margin:0}
+.steps li{counter-increment:s;border-left:2px solid var(--ink);padding-left:16px}
+.steps li::before{content:counter(s);font:800 40px var(--head);color:var(--accent);display:block;line-height:1}
+.steps p{margin:0;color:var(--muted)}
+details{border-bottom:1px solid var(--line);padding:16px 0}
+summary{font:800 20px var(--head);cursor:pointer;list-style:none;display:flex;justify-content:space-between;gap:16px}
+summary::after{content:"+";font-size:26px;line-height:1}
+details[open] summary::after{content:"–"}
+details p{margin:10px 0 0;color:var(--muted);max-width:62ch}
+.faq{max-width:760px}
+.contact{display:grid;grid-template-columns:.8fr 1.2fr;gap:52px}
+.mail{font:800 clamp(20px,3vw,26px) var(--head);word-break:break-all}
+form{display:grid;gap:16px;background:var(--surface);border:2px solid var(--ink);border-radius:12px;padding:26px}
+label{display:grid;gap:6px;font-weight:600}
+input,select,textarea{font:400 17px var(--body);padding:11px 12px;border:2px solid var(--line);border-radius:8px;background:var(--bg);color:var(--ink);width:100%}
+input:focus,select:focus,textarea:focus{border-color:var(--accent);outline:none}
+textarea{min-height:120px;resize:vertical}
+#msg{margin:0;font-weight:600;min-height:1.4em}
+footer{border-top:1px solid var(--line);padding:28px 0;color:var(--muted);font-size:16px}
+footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px}
+.pop-in{animation:rise .7s .1s both}
+@keyframes rise{from{opacity:0;transform:translateY(18px)}to{opacity:1;transform:none}}
+@media (max-width:860px){
+.hero,.contact{grid-template-columns:1fr;gap:38px;padding-top:44px}
+.grid3,.steps{grid-template-columns:1fr}
+.plan.pop{transform:none}
+#menu{display:block}
+nav ul{display:none;position:absolute;left:0;right:0;top:66px;background:var(--bg);border-bottom:1px solid var(--line);flex-direction:column;padding:16px 22px 22px;gap:14px;align-items:flex-start}
+nav ul.open{display:flex}
+}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}.pop-in{animation:none}.btn{transition:none}}
+</style>
+</head>
+<body>
+<header><div class="wrap nav">
+<a class="logo" href="#top" aria-label="RRT Web Designs home"><span>RRT</span>Web Designs</a>
+<nav aria-label="Main">
+<ul id="links">
+<li><a href="#services">Services</a></li>
+<li><a href="#pricing">Pricing</a></li>
+<li><a href="#process">Process</a></li>
+<li><a href="#faq">FAQ</a></li>
+<li><a class="btn" href="#contact">Get a quote</a></li>
+</ul>
+<button class="ico" id="theme" aria-label="Switch light or dark theme">Theme</button>
+<button class="ico" id="menu" aria-expanded="false" aria-controls="links">Menu</button>
+</nav>
+</div></header>
+
+<main id="top">
+<div class="wrap hero">
+<div class="pop-in">
+<h1>A website that makes your business look as good as it is.</h1>
+<p class="lead">RRT Web Designs builds fast, clear, mobile-friendly websites for small businesses, from £100.</p>
+<div class="cta">
+<a class="btn" href="#pricing">See pricing</a>
+<a class="btn alt" href="mailto:roadnightraeon@gmail.com">Email me</a>
+</div>
+</div>
+<div class="demo pop-in" id="demo" style="animation-delay:.25s">
+<div class="chips" role="group" aria-label="Try a sample business type">
+<button class="chip" aria-pressed="true" data-i="0">Bakery</button>
+<button class="chip" aria-pressed="false" data-i="1">Barber</button>
+<button class="chip" aria-pressed="false" data-i="2">Plumber</button>
+<button class="chip" aria-pressed="false" data-i="3">Gym</button>
+</div>
+<div class="mock" aria-live="polite">
+<div class="bar"><i></i><i></i><i></i><em id="url">crumbandco.co.uk</em></div>
+<div class="site">
+<div class="top"><b id="n">Crumb &amp; Co</b><span>Menu · Find us · Contact</span></div>
+<h4 id="h">Fresh bread, baked every morning.</h4>
+<p id="p">Order ahead and collect from the shop on your way to work.</p>
+<span class="go" id="g">Order online</span>
+<div class="tiles" id="t"></div>
+</div>
+</div>
+<p class="note">Sample designs. Tap a business type to see how a site could look.</p>
+</div>
+</div>
+
+<section id="services"><div class="wrap">
+<h2>What I build</h2>
+<p class="sub">Everything you need to look professional online and be found by local customers.</p>
+<div class="grid3">
+<div class="svc"><h3>Business websites</h3><p>Clean pages that explain what you do, show your work and make it easy to get in touch.</p></div>
+<div class="svc"><h3>Mobile-first design</h3><p>Most customers browse on their phone, so every site is built for small screens first.</p></div>
+<div class="svc"><h3>Enquiry forms</h3><p>Customers message you straight from your site, and the enquiry lands in your inbox.</p></div>
+<div class="svc"><h3>Fast loading</h3><p>Lightweight pages that open quickly, so visitors don't leave before they see you.</p></div>
+<div class="svc"><h3>Search-friendly setup</h3><p>Proper titles, descriptions and structure to help people find you on Google.</p></div>
+<div class="svc"><h3>Clear communication</h3><p>Plain English, fixed prices and quick replies by email.</p></div>
+</div>
+</div></section>
+
+<section id="pricing"><div class="wrap">
+<h2>Simple, fixed pricing</h2>
+<p class="sub">One price per package. No hidden fees. Pick the one that fits and I'll get started.</p>
+<div class="grid3">
+<article class="plan">
+<h3>Standard</h3><div class="price">£100</div>
+<p style="margin:0;color:var(--muted)">A neat starter site.</p>
+<ul><li>One-page website</li><li>Mobile friendly design</li><li>Your contact details and opening hours</li><li>Live on the web</li></ul>
+<a class="btn alt" href="#contact" data-plan="Standard (£100)">Choose Standard</a>
+</article>
+<article class="plan pop">
+<span class="tag">Most popular</span>
+<h3>Business</h3><div class="price">£250</div>
+<p style="margin:0;color:var(--muted)">For growing businesses.</p>
+<ul><li>Multi-page website</li><li>Enquiry form</li><li>Services and gallery pages</li><li>Search-friendly setup</li><li>Everything in Standard</li></ul>
+<a class="btn" href="#contact" data-plan="Business (£250)">Choose Business</a>
+</article>
+<article class="plan">
+<h3>Premium</h3><div class="price">£500</div>
+<p style="margin:0;color:var(--muted)">A fully custom build.</p>
+<ul><li>Custom-designed website</li><li>Extra features on request</li><li>Priority support after launch</li><li>Everything in Business</li></ul>
+<a class="btn alt" href="#contact" data-plan="Premium (£500)">Choose Premium</a>
+</article>
+</div>
+</div></section>
+
+<section id="process"><div class="wrap">
+<h2>How it works</h2>
+<p class="sub">Four steps from first message to a live website.</p>
+<ol class="steps">
+<li><h3>Get in touch</h3><p>Tell me about your business and pick a package.</p></li>
+<li><h3>Plan</h3><p>We agree the pages, wording and look.</p></li>
+<li><h3>Build</h3><p>I design and build your site, and you review it.</p></li>
+<li><h3>Launch</h3><p>Once you're happy, your site goes live.</p></li>
+</ol>
+</div></section>
+
+<section id="faq"><div class="wrap">
+<h2>Questions</h2>
+<div class="faq">
+<details><summary>How do I pay?</summary><p>Email me and we'll agree payment details when you choose your package. The price you see is the price you pay.</p></details>
+<details><summary>Can I upgrade later?</summary><p>Yes. Start with Standard and move up to Business or Premium when you're ready.</p></details>
+<details><summary>Will it work on phones?</summary><p>Yes. Every package is designed to work on phones, tablets and computers.</p></details>
+<details><summary>What do you need from me?</summary><p>Your business name, what you offer, your contact details and any photos or logo you have. I can help with the wording.</p></details>
+<details><summary>How do I get started?</summary><p>Fill in the form below or email roadnightraeon@gmail.com with a few details about your business.</p></details>
+</div>
+</div></section>
+
+<section id="contact"><div class="wrap contact">
+<div>
+<h2>Get your quote</h2>
+<p class="sub">Send me a message and I'll reply by email.</p>
+<a class="mail" href="mailto:roadnightraeon@gmail.com">roadnightraeon@gmail.com</a>
+</div>
+<form id="form" novalidate>
+<label>Your name<input id="name" required autocomplete="name"></label>
+<label>Your email<input id="email" type="email" required autocomplete="email"></label>
+<label>Package
+<select id="plan"><option>Standard (£100)</option><option>Business (£250)</option><option>Premium (£500)</option><option>Not sure yet</option></select></label>
+<label>About your business<textarea id="details" required></textarea></label>
+<button class="btn" type="submit">Send message</button>
+<p id="msg" role="status"></p>
+</form>
+</div></section>
+</main>
+
+<footer><div class="wrap"><span>© <span id="yr">2026</span> RRT Web Designs</span><a href="mailto:roadnightraeon@gmail.com">roadnightraeon@gmail.com</a></div></footer>
+
+<script>
+var $=function(i){return document.getElementById(i)};
+$('yr').textContent=new Date().getFullYear();
+var D=[
+{n:'Crumb & Co',u:'crumbandco.co.uk',h:'Fresh bread, baked every morning.',p:'Order ahead and collect from the shop on your way to work.',g:'Order online',c:'#c2410c',c2:'#fff1e6',t:['Sourdough','Pastries','Cakes']},
+{n:'Sharp Cuts',u:'sharpcuts.co.uk',h:'A proper cut, no waiting around.',p:'Book your chair online and walk in on time.',g:'Book a cut',c:'#0f5132',c2:'#e3f4ea',t:['Cuts','Beards','Prices']},
+{n:'Flow Plumbing',u:'flowplumbing.co.uk',h:'Leaks fixed fast, at a fair price.',p:'Local, reliable and available for emergencies.',g:'Call now',c:'#1d4ed8',c2:'#e5edff',t:['Repairs','Boilers','Quotes']},
+{n:'Iron House Gym',u:'ironhousegym.co.uk',h:'Train hard. Feel better.',p:'Flexible memberships and friendly coaches.',g:'Join today',c:'#7e22ce',c2:'#f3e8ff',t:['Classes','Coaching','Join']}];
+function show(i){var d=D[i],m=$('demo');
+m.style.setProperty('--c',d.c);m.style.setProperty('--c2',d.c2);
+$('n').textContent=d.n;$('url').textContent=d.u;$('h').textContent=d.h;$('p').textContent=d.p;$('g').textContent=d.g;
+$('t').innerHTML=d.t.map(function(x){return '<div>'+x+'</div>'}).join('');
+document.querySelectorAll('.chip').forEach(function(c){c.setAttribute('aria-pressed',c.dataset.i==i)})}
+document.querySelectorAll('.chip').forEach(function(c){c.addEventListener('click',function(){show(+c.dataset.i)})});
+show(0);
+var menu=$('menu'),links=$('links');
+menu.addEventListener('click',function(){var o=links.classList.toggle('open');menu.setAttribute('aria-expanded',o)});
+links.addEventListener('click',function(e){if(e.target.tagName==='A'){links.classList.remove('open');menu.setAttribute('aria-expanded','false')}});
+$('theme').addEventListener('click',function(){var r=document.documentElement,dark=r.dataset.theme?r.dataset.theme==='dark':matchMedia('(prefers-color-scheme:dark)').matches;r.dataset.theme=dark?'light':'dark'});
+document.querySelectorAll('[data-plan]').forEach(function(a){a.addEventListener('click',function(){$('plan').value=a.dataset.plan})});
+$('form').addEventListener('submit',function(e){
+e.preventDefault();
+var n=$('name').value.trim(),m=$('email').value.trim(),d=$('details').value.trim(),p=$('plan').value,s=$('msg');
+if(!n||!/^\S+@\S+\.\S+$/.test(m)||!d){s.textContent='Enter your name, a valid email and a few details about your business.';return}
+var b='Name: '+n+'\nEmail: '+m+'\nPackage: '+p+'\n\n'+d;
+window.location.href='mailto:roadnightraeon@gmail.com?subject='+encodeURIComponent('Website enquiry from '+n+' - '+p)+'&body='+encodeURIComponent(b);
+s.textContent='Your email app should open with your message ready to send.';
+});
+</script>
+</body>
+</html>
